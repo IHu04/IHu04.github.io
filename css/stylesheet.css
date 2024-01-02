@@ -1,0 +1,338 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* Removes underline on hyperlink */
+a{
+    text-decoration: none;
+}
+
+
+/* Homescreen Background */
+.main-background{
+    position: absolute;
+    bottom:0px;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/pxfuel.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+    z-index: -1; 
+}
+
+/* Navigation Bar at the Top */
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 90%;
+    padding: 30px 0px;
+    margin: auto;
+}
+
+/* Text of Isaac Hu Logo */
+.logo-text{
+    color: #f3f3f3;
+    font-weight: 500;
+    font-size: 1.4rem; 
+    transition: font-weight 0s;
+}
+
+/* Hover Animation */
+.logo a:hover{
+    color:#f3f3f3;
+    font-weight: 1000;
+    font-size: 1.4rem; 
+    transition-duration: 1s;
+}
+
+/* Menu Bar at the Top (Home About Portfolio) */
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    list-style: none;
+}
+
+.menu li a{
+    color: #f3f3f3;
+    margin: 0px 10px;
+    font-weight: 400;
+}
+
+/* Hover Animation */
+.menu li a.active,
+.menu li a:hover{
+    color: #f3f3f3;
+    font-weight: 600;
+
+}
+
+/* Nav Bar */
+.nav-bar{
+    background-color: rgba(27, 27, 27, 0.7); 
+    height: 95px; 
+    width: 100%; 
+    display: flex;
+}
+
+/* Contact Button */
+.contact-button{
+    width: 130px;
+    height: 40px;
+    display: flex;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    border-radius: 20px;
+    color: #1b1b1b;
+    text-transform: uppercase;
+}
+/* Center Text Bubble */
+.main-text{
+    justify-content: center;
+    align-items: center;
+    max-width: 1920px;
+    min-width: 465px;
+    width: 24%;
+    margin: 20px auto; 
+    border-radius: 40px;
+    overflow: hidden; 
+    margin-top: 20%;
+    margin-left: 34vw;
+    height: 80px;
+    background-color: #1b1b1b;
+
+} 
+
+/* Center Text Styling */
+.main-text .text{
+    text-align: left;
+    position: relative;
+    color: #8e0000;
+    font-size: 3.2rem;
+    font-weight: 800;
+    
+}
+
+/* "I am" text */
+.main-text .text.one{
+    margin-left: 8%;
+    color:#f3f3f3
+}
+
+/* Animated Text */
+.main-text .text.two:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #1b1b1b;
+    border-left: 2px solid #000000;
+    animation: animate 3s steps(15) infinite;
+}
+
+@keyframes animate{
+    40%, 60%{
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: 0%
+    }
+}
+
+/* About Me */
+.about{
+    position: relative;
+    width: 100%;
+    min-width: 300px;
+    margin-top: 38vh;
+    background-color: #1b1b1b;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    
+}
+.about h2{
+    color: #eae7e7;
+    font-weight: 500;
+    padding-left: 10%;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    max-width: 800px;
+}
+.about p{
+    color: #bebebe;
+    font-weight: 500;
+    padding-left: 10%;
+    max-width: 800px;
+    min-width: 300px;
+}
+.about ul{
+    color: #bebebe;
+    font-weight: 500;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10%;
+    max-width: 800px;
+    min-width: 500px;
+}
+.conclusion{
+    padding-bottom: 50px;                                           
+}
+
+/* My Image  */
+.img-container{
+    min-width: 300px;
+    width: 25%;
+    height: 100%;
+    padding-top: 125px;
+    padding-left: 30vh;
+}
+.my-img {
+    min-width: 280px;
+    height: 450px;
+    width: 280px;
+    max-width: 100%;
+    transform: rotate(10deg);
+}
+
+/* PORTFOLIO STYLING SECTION */
+/* Coloring for Nav Bar */
+.top-bar{
+    position: absolute;
+    width: 100%;
+    height: 95px;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0px;
+    z-index: -1;
+}
+
+/* Portfolio Header */
+.portfolio-h1{
+    background-image: linear-gradient(to top, #f8f8f8, rgb(41, 41, 41));
+    position: relative;
+    width: 100%;
+    height: 350px;
+    font-size: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+/* Portfolio Title */
+.portfolio-h1 h1{
+    text-align: center;
+    color: #f3f3f3;
+}
+/* Portfolio Description */
+.portfolio-h1 p{
+    font-weight: 5%;
+    font-size: 1.8rem;
+}
+/* Line seperator */
+.line{
+    position: relative;
+    top: 30px;
+    height: 3px;
+    width: 100px;
+    background-color: #000000;
+}
+/* All portfolio bullet points */
+.points{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+}
+.points h2{
+    padding-top: 50px;
+    padding-left: 26%;
+    font-weight: 1000;
+    font-size: 28px;
+    padding-right: 20%;
+    text-decoration: underline;
+}
+.skills{
+    display: flex;
+    flex-direction: column; 
+    padding-left: 28%; 
+    padding-top: 10px;
+    list-style-type: "◇  ";
+}
+.skills strong{
+    font-weight: 450;
+}
+.points li{
+    padding-left: 0.1em;
+    font-size: 20px;
+    font-weight: 800;
+
+}
+.tech{
+    display: flex;
+    flex-direction: column; 
+    padding-left: 28%; 
+    padding-top: 10px;
+    list-style-type: "◇  ";
+}
+.tech li{
+    font-size: medium;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+
+/* Date formatting */
+.date{
+    color:rgba(50, 50, 50, 0.645);
+    margin-top: -4px;
+    font-size: 13px;
+    padding-left: 2px;
+}
+/* Portfolio Background Texture */
+.portfolio-texture{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background-image: url('../images/paper.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+    opacity: 0.3;
+}
+
+/* Footer Styling */
+.footer1{
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+    background-color: #000000;
+}
+.footer1 h2{
+    text-align: center;
+    color: #f3f3f388;
+    font-weight: 2;
+    font-size: 0.8rem;
+    padding-top: 18px;
+}
+
+
+
+
